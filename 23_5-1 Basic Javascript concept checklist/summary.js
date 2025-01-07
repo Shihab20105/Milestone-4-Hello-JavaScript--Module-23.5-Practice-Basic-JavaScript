@@ -248,12 +248,512 @@ Summary:
 
 Why Use Negative Indices?
 Negative indices are helpful when you want to extract characters near the end of the string without having to count how many characters are in the string.
-*/
+
+
+** What is function in JavaScript?
+
+* A block of code.
+* A set of statements that performs a task when it is called.
+* Maintains a relationship with input and output.
+
+                        Function syntax
+
+                  (Name)   (Parameters)
+                     ^        ^
+        function addNumbers(a, b){
+(Body)>    return a + b;
+        }
+
+
+                    (Function
+                        call)    (Arguments)
+                          ^         ^
+        const result = addNumbers(5, 7);
+                ^
+        (Return value)
+
+** Object syntax 
+* The Object type is used to store various keyed collections and more complex entities.
+
+
+        const object = {
+            hello: 'world' -->(Property value)
+        }     ^
+              ^
+        (Property name(key))
+
+
+** 'var', 'let' and 'const' are containers for storing variables.
+
+1. 'var'
+* Old way to declare variables.
+* Can be used anywhere in a function once declared.
+* Can be changed or reassigned.
+Example:
+var name = "John";
+name = "Mike"; // Works fine
+
+2. 'let'
+* Newer and better for most cases.
+* Can only be used inside the block '{}' where it’s declared.
+* Can be reassigned.
+Example:
+let age = 25;
+age = 30; // Works fine
+
+3. 'const'
+* Like 'let', but cannot be changed after setting.
+* Good for values you don’t want to change.
+Example:
+const city = "New York";
+city = "Los Angeles"; // ERROR! Can’t reassign a const
+
+Quick Summary:
+
+Keyword	 ---------- Can Change Value?	----------- Works Only Inside {}?	---------- Use It for...
+ ^                    ^                               ^                                 ^
+var	    ----------  Yes	                ----------- No	                    ---------- Old code (avoid using)
+let	    ----------  Yes	                ----------- Yes	                    ---------- Values that can change
+const	----------  No	                ----------- Yes	                    ---------- Values that stay the same
+
+* Use 'let' for variables that will be reassigned.
+* Use 'const' for values that will not be reassigned (default choice for most variables).
+* Avoid 'var' due to potential scoping issues and unexpected behaviors.
+
+
+** Convert 'inch to feet, miles to kilometer'.
+
+* Inch to Feet:
+
+function inchToFeet(inches){
+    const feet = inches / 12;
+    return feet;
+}
+
+const tomsInches = 168;
+const tomsFeet = inchToFeet(tomsInches);
+console.log('Tom Feet', tomsFeet);
+//Output: Tom Feet 14 
+
+
+* Miles to Kilometer:
+
+function milesToKilometer(miles){
+    const kilometer = miles*1.609;
+    return kilometer;
+}
+
+console.log(milesToKilometer(5));
+// Output: 8.045
+
+
+Here is an improved version:
+
+function milesToKilometer(miles) {
+    const conversionFactor = 1.609; // Declaring the conversion factor as a constant
+    const kilometer = miles * conversionFactor;
+    return kilometer; // Returns the result
+}
+
+console.log(milesToKilometer(5)); // Output: 8.045
+
+
+* Checked if a number is 'even' or 'odd'.
+
+function isEven(number){
+    const remainder = number % 2;
+    if(remainder === 0){
+        console.log('Number is even');
+    }
+    else{
+        console.log('Number is odd');
+    }
+}
+
+isEven(303);
+isEven(1280);
+
+// Output:
+Number is odd
+Number is even 
 
 
 
+
+function isEven(number){
+    const remainder = number % 2;
+    //console.log(remainder);
+    if(remainder === 0){
+        return true;
+    }
+    else{
+        return false;
+    }
+}
+
+
+const myNumberIsEven = isEven(303);
+console.log(myNumberIsEven);
+const herNumberIsEven = isEven(1280);
+console.log(herNumberIsEven);
+// Output:
+false
+true
+
+
+* Checked if a year is a leap year.
+
+function isLeapYear(year){
+    const remainder = year % 4;
+    if(remainder === 0){
+        return true;
+    }
+    return false;
+}
+
+const isMyYearLeapYear = isLeapYear(1933);
+console.log('My year:', isMyYearLeapYear);
+const isHerYearLeapYear = isLeapYear(1960);
+console.log('Her year:', isHerYearLeapYear);
+
+// Output:
+My year: false
+Her year: true 
+
+
+
+function isLeapYear(year) {
+    if ((year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0)) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+  
+// Example usage
+console.log(isLeapYear(2000)); // true
+console.log(isLeapYear(1900)); // false
+console.log(isLeapYear(2024)); // true
+
+Output:
+true
+false
+true
+
+
+Explanation:
+1. 'year % 4 === 0': Checks if the year is divisible by 4.
+2. 'year % 100 !== 0': Ensures that the year is not divisible by 100.
+3. 'year % 400 === 0': If the year is divisible by 400, it overrides the previous condition, making it a leap year.
+
+
+** Factorial
+* A factorial is a function that multiplies a number by every number below it till 1.
+
+// 1 + 2 + 3 + 4 + 5 + 6 + 7
+ 
+for(let i = 1; i <=7; i++){
+    console.log(i);
+} 
+
+// Output:
+1
+2
+3
+4
+5
+6
+7
+
+
+
+let sum = 0;
+for(let i = 1; i <=7; i++){
+    sum = sum + i;
+    console.log(i, sum);
+} 
+
+// Output:
+1 1
+2 3
+3 6
+4 10
+5 15
+6 21
+7 28
+
+
+// Converting into 'function'
+//Let’s walk through the function with an example input, say 'sumOfNumbers(5)':
+
+
+function sumOfNumbers(number) {
+    let sum = 0;
+    for (let i = 1; i <= number; i++) {
+        sum = sum + i;
+        console.log(i, sum);
+    }
+    return sum;
+}
+
+sumOfNumbers(5);
+
+Output:
+1 1
+2 3
+3 6
+4 10
+5 15
+
+
+1! = 1
+2! = 2*1
+3! = 3*2*1
+4! = 4*3*2*1
+5! = 5*4*3*2*1
+
+
+3! = 3*2*1                          3! = 3*2!
+                                    3! = 3*(3-1)!
+                                    
+                                    
+4! = 4*3*2*1                        4! = 4*3!
+                                    4! = 4*(4-1)! 
+                                    
+5! = 5*4*3*2*1                      5! = 5*4!
+                                    5! = 5*(5-1)!
+
+
+
+
+function multiplicationNumbers(number){
+    let result = 0;
+    for(let i = 1; i <= 7; i++){
+        result = result * i;
+    }
+    return result;
+}
+
+const result = multiplicationNumbers(7); 
+console.log(result); 
+
+//Output: 0
+
+
+
+function multiplicationNumbers(number){
+    let result = 1;
+    for(let i = 1; i <= 7; i++){
+        result = result * i;
+    }
+    return result;
+}
+
+const result = multiplicationNumbers(7); 
+console.log(result); 
+
+// Output: 5040
+
+
+ 
+function multiplicationNumbers(number){
+    let result = 1;
+    for(let i = 1; i <= 7; i++){
+        result = result * i;
+    }
+    return result;
+}
+
+const result = multiplicationNumbers(9); 
+console.log(result); 
+
+//Output: 5040
+
+
+ 
+function factorial(number){
+    let result = 1;
+    for(let i = 1; i <= number; i++){
+        result = result * i;
+    }
+    return result;
+}
+
+const result = factorial(9); 
+console.log(result); 
+
+//Output: 362880
+
+
+ 
+To calculate the factorial in reverse, you can modify the 'for' loop so that it starts from the given number and decrements down to 1. Here's how you can do it:
+
+
+function factorial(number) {
+    let result = 1;
+    for (let i = number; i >= 1; i--) {
+        result = result * i;
+    }
+    return result;
+}
+
+const result = factorial(9);
+console.log(result);
+
+// Output: 362880
+
+
+In this version:
+
+* The loop starts with 'i' equal to 'number' and decrements 'i' down to 1.
+* It multiplies 'result' by 'i' in each iteration, just like before, but in reverse order.
+This will give the same result:
+Output: 362880
+
+
+** Factorial Reverse With For Loop:
+
+function factorial(number){
+    for(let i = number; i >= 1; i--){
+        console.log(i);
+    }
+}
+
+factorial(7); 
+
+// Output:
+7
+6
+5
+4
+3
+2
+1
 
 
 
  
-    
+function factorial(number){
+    for(let i = number; i >= 1; i--){
+        console.log(i);
+    }
+}
+
+factorial(9); 
+
+// Output:
+9
+8
+7
+6
+5
+4
+3
+2
+1 
+
+
+
+function factorial(number){
+    let result = 1;
+    for(let i = number; i >= 1; i--){
+        result = result *i;
+        console.log(i);
+    }
+    return result;
+}
+
+const fact = factorial(9);
+console.log('Factorial of 9:', fact); 
+
+// Output:
+6
+5
+4
+3
+2
+1
+Factorial of 9: 362880 
+
+
+ 
+function factorial(number){
+    let result = 1;
+    for(let i = number; i >= 1; i--){
+        result = result *i;
+        console.log(i);
+    }
+    return result;
+}
+
+const number = 5;
+const fact = factorial(number);
+console.log('Factorial of :', number, fact); 
+
+// Output:
+5
+4
+3
+2
+1
+Factorial of : 5 120
+
+
+function factorial(number){
+    let result = 1;
+    for(let i = number; i >= 1; i--){
+        result = result *i;
+        console.log(i);
+    }
+    return result;
+}
+
+const number = 6;
+const fact = factorial(number);
+console.log('Factorial of:', number, fact);
+// Output:
+6
+5
+4
+3
+2
+1
+Factorial of: 6 720 
+
+
+** Factorial With While Loop:
+
+function factorial(number){
+    let num = 1;
+    let result = 1
+    while(num <= number){
+        result = result * num;
+        num++;
+    }
+    return result;
+}
+
+const number = 6;
+const fact = factorial(number);
+console.log('Factorial of:', number, fact);
+// Output:
+Factorial of: 6 720
+
+
+* Factorial Reverse With While Loop:*
+
+function factorial(number){
+    let i = number;
+    let result = 1;
+    while( i >= 1){
+        result = result * i;
+        i--;
+    }
+    return result;
+}
+
+const number = 7;
+const fact = factorial(number);
+console.log('Factorial of:', number, fact);
+// Output:
+Factorial of: 7 5040 */
