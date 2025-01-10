@@ -961,8 +961,8 @@ Example with String:
 const text = 'JavaScript';
 const slicedText = text.slice(0, 4); // Extracts characters from index 0 to 3
 
-console.log(slicedText);  // Output: 'Java'
-console.log(text);        // Output: 'JavaScript' (Original string unchanged)
+console.log(slicedText); 
+console.log(text);  
 Output:
 Java
 JavaScript
@@ -975,7 +975,7 @@ Example with Array:
 
 const numbers = [10, 20, 30, 40, 50];
 const slicedNumbers = numbers.slice(0, 4); // Extracts elements at indices 0, 1, 2, and 3
-console.log(slicedNumbers);  // Output: [10, 20, 30, 40]
+console.log(slicedNumbers);
 Output: [10, 20, 30, 40]
 
 
@@ -983,7 +983,7 @@ Example with String:
 
 const text = 'JavaScript';
 const slicedText = text.slice(0, 4); // Extracts characters at indices 0, 1, 2, and 3
-console.log(slicedText);  // Output: 'Java'
+console.log(slicedText); 
 Output: Java
 
 * The 'slice()' method always stops just before the 'end' index.
@@ -1007,8 +1007,8 @@ Example 1: Removing Elements
 const fruits = ['apple', 'banana', 'cherry', 'date'];
 const removedFruits = fruits.splice(1, 2);  // Remove 2 elements starting at index 1
 
-console.log(fruits);         // Output: ['apple', 'date']
-console.log(removedFruits);  // Output: ['banana', 'cherry']
+console.log(fruits);        
+console.log(removedFruits); 
 Output:
 [ 'apple', 'date' ]
 [ 'banana', 'cherry' ]
@@ -1019,7 +1019,7 @@ Example 2: Adding Elements
 const colors = ['red', 'blue'];
 colors.splice(1, 0, 'green', 'yellow');  // Add 'green' and 'yellow' at index 1
 
-console.log(colors);  // Output: ['red', 'green', 'yellow', 'blue']
+console.log(colors); 
 Output:
 [ 'red', 'green', 'yellow', 'blue' ]
 
@@ -1029,7 +1029,7 @@ Example 3: Replacing Elements
 const animals = ['dog', 'cat', 'rabbit'];
 animals.splice(1, 1, 'lion');  // Replace 'cat' at index 1 with 'lion'
 
-console.log(animals);  // Output: ['dog', 'lion', 'rabbit']
+console.log(animals); 
 Output:
 [ 'dog', 'lion', 'rabbit' ]
 
@@ -1051,8 +1051,8 @@ Original Code:
 const fruits = ['apple', 'banana', 'cherry', 'date'];
 const removedFruits = fruits.splice(1, 2);  // Remove 2 elements starting at index 1
 
-console.log(fruits);         // Output: ['apple', 'date']
-console.log(removedFruits);  // Output: ['banana', 'cherry']
+console.log(fruits);         
+console.log(removedFruits);  
 Output:
 [ 'apple', 'date' ]
 [ 'banana', 'cherry' ]
@@ -1129,8 +1129,8 @@ Visual Example:
 const fruits = ['apple', 'banana', 'cherry', 'date'];
 const removedFruits = fruits.splice(1, 2);  // Start at index 1, remove 2 elements
 
-console.log('Modified fruits array:', fruits);  // Output: ['apple', 'date']
-console.log('Removed elements:', removedFruits);  // Output: ['banana', 'cherry']
+console.log('Modified fruits array:', fruits); 
+console.log('Removed elements:', removedFruits); 
 Output:
 Modified fruits array: [ 'apple', 'date' ]
 Removed elements: [ 'banana', 'cherry' ]
@@ -1157,4 +1157,107 @@ Summary:
 * 'splice(1, 2)' does not remove elements by index values — it removes a specific count of elements starting from the given index.
 * 'banana' (index 1) and 'cherry' (index 2) are removed, but 'date' remains because only 2 elements were specified for deletion.
 
+
+
+** Concat()
+The 'concat()' method is used to merge two or more arrays.
+
+var str1 = 'Hello';
+var str2 = 'World!';
+
+var res = str1.concat(' ', str2);  // Adds a space between 'Hello' and 'World!'
+console.log(res);  
+Output: Hello World!
+
+
+* The 'concat()' method in JavaScript is used to join two or more strings into one. It returns a new string without modifying the original strings. This method is often used for combining string values efficiently.
+
+Syntax:
+string1.concat(string2, string3, ..., stringN)
+
+Parameters:
+* 'string2, string3, ..., stringN': One or more strings to concatenate with the first string.
+
+Example:
+
+let firstName = "John";
+let lastName = "Doe";
+let fullName = firstName.concat(" ", lastName);
+console.log(fullName);
+Output: John Doe
+
+Key Points:
+
+* Non-Mutating: 'concat()' does not change the original strings.
+* Multiple Arguments: You can pass more than two strings to concatenate.
+
+Alternative:
+Using the '+' operator or template literals is more common and sometimes more readable:
+
+
+let fullName = firstName + " " + lastName;  // Using + operator
+let fullName2 = `${firstName} ${lastName}`; // Using template literals
+
+
+
+let firstName = "John";
+let lastName = "Doe";
+
+// Using + operator
+let fullName = firstName + " " + lastName;
+console.log(fullName);  
+
+// Using template literals
+let fullName2 = `${firstName} ${lastName}`;
+console.log(fullName2); 
+Output:
+John Doe
+John Doe
+
+All these methods produce the same result. Use 'concat()' if you prefer method chaining or find it clearer for multiple concatenations.
+
+
+** isArray()
+The 'isArray()' method determines whether the passed value is an Array.
+
+
+* The 'Array.isArray()' method in JavaScript is used to determine whether a given value is an array. It returns a boolean ('true' or 'false').
+
+Syntax:
+
+Array.isArray(value)
+
+* 'value': The value you want to check.
+
+Example:
+
+let arr = [1, 2, 3];
+let str = "Hello";
+
+console.log(Array.isArray(arr));  // Output: true
+console.log(Array.isArray(str));  // Output: false
+
+Use Cases:
+
+1. To check if a variable is an array before performing array-specific operations.
+2. Helps avoid type-related errors when working with complex data structures.
+
+Comparison with typeof:
+
+console.log(typeof arr);  // Output: "object" (arrays are objects)
+
+The 'typeof' operator returns "object" for arrays, so using 'Array.isArray()' is the correct way to differentiate arrays from other objects.
+
+let arr = [1, 2, 3];
+let str = "Hello";
+
+console.log(Array.isArray(arr)); 
+console.log(Array.isArray(str));  
+console.log(typeof arr);
+Output:
+true
+false
+object
 */
+
+
