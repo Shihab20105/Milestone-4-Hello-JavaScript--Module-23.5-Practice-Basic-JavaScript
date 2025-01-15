@@ -118,6 +118,14 @@ function inchToFeet(inches){
 const tomsInches = 168;
 const tomsFeet = inchToFeet(tomsInches);
 console.log('Tom Feet', tomsFeet);
+Output: Tom Feet 14
+* It converts inches to feet by dividing the input inches by 12, and the output for 168 inches is 14 feet, which is accurate.
+
+Here’s a brief breakdown:
+
+* 'inchToFeet' function takes a parameter 'inches'.
+* It divides 'inches' by 12 to convert to feet.
+* The function is called with '168' inches, and the result (14) is logged to the console.
 
 / ----------------------------------------------------------------------------------------------------------- /
 
@@ -188,4 +196,56 @@ Conclusion:
 * Your code follows best practices, and the function works correctly.
 * The 'feet' parameter allows the function to handle various inputs dynamically.
 * Multiplying by '12' converts feet to inches accurately, and 'return' gives back the result for use elsewhere.
+
+
+/ ------------------------------------------------------------------------------------------------------------- /
+
+
+Question 2: Centimeter to Meter, 'centimeterToMeter'. You must name the function exactly as it is written here. How much is 1000 centimeters in meters and  It will only return the number, how much is it?
+
+
+function centimeterToMeter(centimeters){
+    const meter = centimeters / 100;
+    return meter;
+}
+
+const tomsCentimeter = 1000;
+const tomsMeter = centimeterToMeter(tomsCentimeter);
+console.log('Toms Meter', tomsMeter);
+Output: Toms Meter 10
+
+/ ------------------------------------------------------------------------------------------------------------ /
+
+function centimeterToMeter(centimeters){
+    const meter = centimeters / 100;
+    return meter;
+}
+
+const tomsCentimeter = 1000;
+const tomsMeter = centimeterToMeter(tomsCentimeter);
+console.log(tomsMeter);
+Output: 10
+
+/ ------------------------------------------------------------------------------------------------------------- /
+
+function centimeterToMeter(centimeters) {
+    const meter = centimeters / 100;  // Correct formula: 1 meter = 100 centimeters
+    return meter;                     // Return the converted value
+}
+
+const tomsCentimeter = 1000;           // tomsCentimeter is set to 1000
+const tomsMeter = centimeterToMeter(tomsCentimeter);  // Function call to convert centimeters to meters
+console.log(tomsMeter);                // Prints the result to the console
+Output: 10
+
+Why It Works:
+* The function 'centimeterToMeter' correctly divides the input 'centimeters' by '100' to convert to meters.
+* 'tomsCentimeter' is passed as '1000', so '1000 / 100' returns '10'.
+* 'console.log(tomsMeter)' prints the value '10' to the console.
 */
+
+
+
+
+
+
