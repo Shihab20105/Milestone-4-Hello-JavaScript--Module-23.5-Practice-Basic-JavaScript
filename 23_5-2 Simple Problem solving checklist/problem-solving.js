@@ -2,11 +2,11 @@
 
 /*                          Problem Practice
 
-Question 1: Feet to inch, 'feetToInch'. You must name the function exactly as it is written here. How many inches are in 15 feet?
+** Question 1: Feet to inch, 'feetToInch'. You must name the function exactly as it is written here. How many inches are in 15 feet?
 
-Question 2: Centimeter to Meter, 'centimeterToMeter'. You must name the function exactly as it is written here. How much is 1000 centimeters in meters and  It will only return the number, how much is it?
+** Question 2: Centimeter to Meter, 'centimeterToMeter'. You must name the function exactly as it is written here. How much is 1000 centimeters in meters and  It will only return the number, how much is it?
 
-Question 3. Count Paper, 'paperRequirements'. You must name the function exactly as it is written here. You are given 3 parameters:
+** Question 3. Count Paper, 'paperRequirements'. You must name the function exactly as it is written here. You are given 3 parameters:
 Count Paper:
 book1: 100 pages
 book2: 200 pages
@@ -37,17 +37,17 @@ If you need 50 copies of Book 1, 20 copies of Book 2, and 14 copies of Book 3, h
 Output:
 Calculate and return the total number of pages needed to print all the requested copies of the three books.
 
-Question 4: There will be many names in one array. For example ['Hasan', 'Jamal', 'Mohammad Yousuf', 'Mizan', 'Jubayer Bin Rasheed', 'Mamun', 'Kamal',]; . So your job is to write a function that does this 'bestFriend' and Return the name that is the largest among them. You must name the function exactly as it is written here which is 'bestFriend'.
+** Question 4: There will be many names in one array. For example ['Hasan', 'Jamal', 'Mohammad Yousuf', 'Mizan', 'Jubayer Bin Rasheed', 'Mamun', 'Kamal',]; . So your job is to write a function that does this 'bestFriend' and Return the name that is the largest among them. You must name the function exactly as it is written here which is 'bestFriend'.
 
-Question 5: There will be an array, it will have many numbers in it and there will be positive and negative numbers. For example [45, 87, 96, 11, 63, -56, 71, 28]; . If a negative number ever comes up, the loop will stop at that point and It will return all the numbers found until it is stops. You have to declare a function which is 'onlyPositive'. 
+** Question 5: There will be an array, it will have many numbers in it and there will be positive and negative numbers. For example [45, 87, 96, 11, 63, -56, 71, 28]; . If a negative number ever comes up, the loop will stop at that point and It will return all the numbers found until it is stops. You have to declare a function which is 'onlyPositive'. 
 * You will pass an array like this as an input parameter to a function.
 * After this, your task will be to take each element from this array until, when you get a negative number which has a value less than 0, then you have to stop the loop immediately, then all the elements found so far, you will return them as an array.
-*/
 
-/* ----------------------------------------------------------------------------------------------------------  */
 
-/* 
-Question 1: Feet to inch, 'feetToInch'. You must name the function exactly as it is written here. How many inches are in 15 feet?
+
+/ ----------------------------------------------------------------------------------------------------------  /
+
+** Question 1: Feet to inch, 'feetToInch'. You must name the function exactly as it is written here. How many inches are in 15 feet?
 
 The function named exactly as 'feetToInch' should convert feet to inches. Here's the solution and how to calculate how many inches are in 15 feet:
 
@@ -57,8 +57,8 @@ function feetToInch(feet){
 const result = feetToInch(15);
 console.log(result);
 Output: 180
-
 / ------------------------------------------------------------------------------------------------------------- /
+
 
 function feetToInch(feet) {
     return feet * 12;  // 1 foot = 12 inches
@@ -126,8 +126,8 @@ Here’s a brief breakdown:
 * 'inchToFeet' function takes a parameter 'inches'.
 * It divides 'inches' by 12 to convert to feet.
 * The function is called with '168' inches, and the result (14) is logged to the console.
-
 / ----------------------------------------------------------------------------------------------------------- /
+
 
 function feetToInch(feet){
     const inches = feet * 12;
@@ -198,10 +198,9 @@ Conclusion:
 * Multiplying by '12' converts feet to inches accurately, and 'return' gives back the result for use elsewhere.
 
 
+
 / ------------------------------------------------------------------------------------------------------------- /
-
-
-Question 2: Centimeter to Meter, 'centimeterToMeter'. You must name the function exactly as it is written here. How much is 1000 centimeters in meters and  It will only return the number, how much is it?
+** Question 2: Centimeter to Meter, 'centimeterToMeter'. You must name the function exactly as it is written here. How much is 1000 centimeters in meters and  It will only return the number, how much is it?
 
 
 function centimeterToMeter(centimeters){
@@ -213,8 +212,8 @@ const tomsCentimeter = 1000;
 const tomsMeter = centimeterToMeter(tomsCentimeter);
 console.log('Toms Meter', tomsMeter);
 Output: Toms Meter 10
-
 / ------------------------------------------------------------------------------------------------------------ /
+
 
 function centimeterToMeter(centimeters){
     const meter = centimeters / 100;
@@ -225,8 +224,8 @@ const tomsCentimeter = 1000;
 const tomsMeter = centimeterToMeter(tomsCentimeter);
 console.log(tomsMeter);
 Output: 10
-
 / ------------------------------------------------------------------------------------------------------------- /
+
 
 function centimeterToMeter(centimeters) {
     const meter = centimeters / 100;  // Correct formula: 1 meter = 100 centimeters
@@ -245,9 +244,7 @@ Why It Works:
 
 
 
-
-
-
+/ ------------------------------------------------------------------------------------------------------------ /
 ** Question 3. Count Paper, 'paperRequirements'. You must name the function exactly as it is written here. You are given 3 parameters:
 Count Paper:
 book1: 100 pages
@@ -287,9 +284,8 @@ const result = paperRequirements(book1Copies, book2Copies, book3Copies);
 
 console.log(`Total paper needed: ${result}`);
 // Output: Total paper needed: 13200
-
-
 / ------------------------------------------------------------------------------------------------------------- /
+
 
 function calculatePagesForBook1(book1Copies) {
     const pagesPerBook1 = 100;
@@ -323,8 +319,6 @@ const book3Copies = 14;
 const result = paperRequirements(book1Copies, book2Copies, book3Copies);
 
 console.log(`Total paper needed: ${result}`);
-
-
 / ------------------------------------------------------------------------------------------------------------ /
 
 
@@ -354,8 +348,8 @@ const result = paperRequirements(book1Copies, book2Copies, book3Copies);
 
 console.log(`Total paper needed: ${result}`);
 // Output: Total paper needed: 13200
-
 / ------------------------------------------------------------------------------------------------------------ /
+
 
 function paperRequirements(book1Copies, book2Copies, book3Copies){
     const pagesPerBook1 = 100;
@@ -377,4 +371,139 @@ const book3Copies = 14;
 const result = paperRequirements(book1Copies, book2Copies, book3Copies);
 console.log(`Total Paper Needed: ${result}`);
 // Output: Total Paper Needed: 13200
+
+
+
+/ ------------------------------------------------------------------------------------------------------------- /
+** Question 4: There will be many names in one array. For example ['Hasan', 'Jamal', 'Mohammad Yousuf', 'Mizan', 'Jubayer Bin Rasheed', 'Mamun', 'Kamal',]; . So your job is to write a function that does this 'bestFriend' and Return the name that is the largest among them. You must name the function exactly as it is written here which is 'bestFriend'.
+
+function bestFriend(names){
+    if (!Array.isArray(names) || names.length === 0){
+        return 'Please provide a valid array of names.';
+    }
+    let largestName = names[0];
+
+    for(let i = 1; i < names.length; i++){
+        if(names[i].length > largestName.length){
+            largestName = names[i];
+        }
+    }
+
+    return largestName;
+}
+
+const friends = ['Hasan', 'Jamal', 'Mohammad Yousuf', 'Mizan', 'Jubayer Bin Rasheed', 'Mamun', 'Kamal',];
+console.log(bestFriend(friends));
+// Output: Jubayer Bin Rasheed
+/ ------------------------------------------------------------------------------------------------------------- /
+
+
+function bestFriend(names) {
+  if (!Array.isArray(names) || names.length === 0) {
+    return "Please provide a valid array of names.";
+  }
+
+  let largestName = names[0]; // Start with the first name
+
+  for (let i = 1; i < names.length; i++) {
+    if (names[i].length > largestName.length) {
+      largestName = names[i]; // Update if current name is longer
+    }
+  }
+
+  return largestName; // Return the largest name
+}
+
+// Example usage
+const friends = ['Hasan', 'Jamal', 'Mohammad Yousuf', 'Mizan', 'Jubayer Bin Rasheed', 'Mamun', 'Kamal'];
+console.log(bestFriend(friends)); 
+// Output: Jubayer Bin Rasheed
+
+Explanation:
+1. The 'bestFriend' function takes a parameter 'names', expected to be an array of names.
+2. '!Array.isArray(names)' ensures the input is an array, and 'names.length === 0' checks if it’s empty.
+3. A 'for' loop starts at the second element (index 1) to compare name lengths.
+4. The longest name found is stored in 'largestName'.
+5. The function returns the longest name after completing the loop.
+
+
+What Is the Goal?
+We have a list of names, like:
+
+['Hasan', 'Jamal', 'Mohammad Yousuf', 'Mizan', 'Jubayer Bin Rasheed', 'Mamun', 'Kamal']
+We want to find the longest name in this list using a function called 'bestFriend'.
+
+Step 1: Define the Function
+We create a function called 'bestFriend' that will take an array of names as input.
+
+
+function bestFriend(names) {
+
+Step 2: Check if the Input is Valid
+We check if:
+
+* The input is actually an array.
+* The array is not empty (it must have at least one name).
+
+if (!Array.isArray(names) || names.length === 0) {
+  return "Please provide a valid array of names.";
+}
+
+* 'Array.isArray(names)' checks if 'names' is an array.
+* '!' means "not," so '!Array.isArray(names)' means "names is not an array."
+* If the input is not valid, we return a message instead of running the rest of the function.
+
+Step 3: Start with the First Name
+We assume the first name is the longest name for now.
+
+let largestName = names[0];
+
+Step 4: Loop Through All Names
+We check each name in the list one-by-one to see if it is longer than the current 'largestName'. If we find a longer name, we update 'largestName' with that name.
+
+for (let i = 1; i < names.length; i++) {
+  if (names[i].length > largestName.length) {
+    largestName = names[i];  // Update to the longer name
+  }
+}
+
+* 'names[i]' is the name at position 'i' in the list.
+* '.length' gives the length of a name.
+* If the current name is longer, we set 'largestName' to that name.
+
+Step 5: Return the Longest Name
+Finally, after checking all the names, we return 'largestName'.
+
+return largestName;
+
+Example in Action
+
+const friends = ['Hasan', 'Jamal', 'Mohammad Yousuf', 'Mizan', 'Jubayer Bin Rasheed', 'Mamun', 'Kamal'];
+console.log(bestFriend(friends));  
+// Output: Jubayer Bin Rasheed
+
+Simple Summary:
+1. We assume the first name is the longest.
+2. We look at each name in the list.
+3. If we find a longer name, we update the longest name.
+4. After checking all names, we return the longest one!
+/ ------------------------------------------------------------------------------------------------------------ /
+
+function bestFriend(names) {
+  if (!Array.isArray(names) || names.length === 0) {
+    return "Please provide a valid array of names.";
+  }
+  
+  return names.reduce((largest, current) => current.length > largest.length ? current : largest, names[0]);
+}
+
+// Example usage
+const friends = ['Hasan', 'Jamal', 'Mohammad Yousuf', 'Mizan', 'Jubayer Bin Rasheed', 'Mamun', 'Kamal'];
+console.log(bestFriend(friends)); 
+// Output: Jubayer Bin Rasheed
+
+Explanation:
+* 'reduce()' iterates through the array, comparing the length of the current name with the longest name found so far.
+* The function returns the name with the most characters by continuously updating the longest name.
+
 */
