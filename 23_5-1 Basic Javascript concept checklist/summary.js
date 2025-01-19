@@ -2,29 +2,42 @@
 
 /*                          Milestone - 4 Summary 
 
-** What have we learned in Milestone - 4?
+                     What have we learned in Milestone - 4?
 
-* JavaScript is a 'high-level, interpreted programming language'. It makes the web pages more 'interactive,.We can use JavaScript to make 'animation'.
-* Variable is like a box that store things. There are five types of variables 'number, string, boolean, null and undefined'.
-* JavaScript keywords are 'reserved' words and they cannot be used as variable name and function name.
-* 'Camel Case, Snake Case and Pascal Case' are the three most common naming conventions.
-* Variable names are case sensitive.
-* We discussed 'four' types of mathematical operations: 'addition, subtraction, multiplication and 'division (+, -, *, /)'.
-* Shorthand mathematical operations (+=, -=, *=, /=, ++, --).
-* We can join two strings together using the 'concatenation operator, +'.
-* Using the 'modulus operator, %', we can find the remainder of a division.
-* parseInt and parseFloat
-    parseInt                            parseFloat
+** JavaScript is a 'high-level, interpreted programming language'. It makes the web pages more 'interactive,.We can use JavaScript to make 'animation'.
+
+** Variable is like a box that store things. There are five types of variables 'number, string, boolean, null and undefined'.
+
+** JavaScript keywords are 'reserved' words and they cannot be used as variable name and function name.
+
+** 'Camel Case, Snake Case and Pascal Case' are the three most common naming conventions.
+
+** Variable names are case sensitive.
+
+** We discussed 'four' types of mathematical operations: 'addition, subtraction, multiplication and 'division (+, -, *, /)'.
+
+** Shorthand mathematical operations (+=, -=, *=, /=, ++, --).
+
+** We can join two strings together using the 'concatenation operator, +'.
+
+** Using the 'modulus operator, %', we can find the remainder of a division.
+
+** parseInt and parseFloat:
+
+    parseInt:                            parseFloat:
     string to int                       string to float
     '20' ---> 20                        '20.13' ---> 20.13
-* Typeof
+
+** Typeof
 'typeof' is a JavaScript keyword that will return the type of variable.
 
 var massage = 'Hello Coders!';
 console.log(typeof message);
 // Output: string
 
-* Array in JavaScript
+
+** Array in JavaScript:
+
 const salad = ['Tomato', 'Mushroom', 'Broccoli', 'Cucumber', 'Lettuce', 'Carrot', 'Avocado'];
 Element at index0 is Tomato
 Element at index1 is Mushroom
@@ -36,25 +49,37 @@ Element at index6 is Avocado
 
 const number = [1, 2, 3, 4, 5, 10, 20, 30, 40, 50];
 
-* Array Length
+** Array Length:
 Length is a property of arrays in JavaScript that tells us the number of elements in a given array.
 const letters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J'];
                   0    1    2    3    4    5    6    7    8    9
                   Array length is 10
                   An array of 10 elements 
 
-* The 'indexOf'() method returns the index (position) of a specified value.
-* We can replace an element in an array with the help of array indices e.g: 'arrayName[index] = newValue'.
-* The 'push'() method adds new items to the end of an array.
-* The 'pop'() method removes the last element from the end of an array.
-* Comparison operators are used to test for 'true' or 'false'.
-* The 'if statement' executes if the condition is 'true'.
-* The 'else statement' executes if the condition is 'false'.
-* Logical Operator, '&&', returns 'true' if 'both statements are true' and logical operator, '||', returns 'true' if 'one of the statements is true'.
-* We write multi stage conditions if-else when we have multiple conditions.
-* A nested conditional statement is 'an if or else statement' inside another 'if else statement'. 
 
-* Multi stage condition
+** The 'indexOf'() method returns the index (position) of a specified value.
+
+** We can replace an element in an array with the help of array indices e.g: 'arrayName[index] = newValue'.
+
+** The 'push'() method adds new items to the end of an array.
+
+** The 'pop'() method removes the last element from the end of an array.
+
+** Comparison operators are used to test for 'true' or 'false'.
+
+** The 'if statement' executes if the condition is 'true'.
+
+** The 'else statement' executes if the condition is 'false'.
+
+** Logical Operator, '&&', returns 'true' if 'both statements are true' and logical operator, '||', returns 'true' if 'one of the statements is true'.
+
+** We write multi stage conditions if-else when we have multiple conditions.
+
+** A nested conditional statement is 'an if or else statement' inside another 'if else statement'. 
+
+
+** Multi stage condition:
+
 var name = 'Peter';
 
 if(name == 'Peter'){
@@ -67,7 +92,8 @@ else{
     //code will not be executed
 }                 
 
-/* 
+
+
 var name = 'Peter';
 
 if (name === 'Peter') {
@@ -77,49 +103,99 @@ if (name === 'Peter') {
 } else {
     console.log('Hello, stranger!'); // This will also be skipped
 } 
-*/
 // Output: Hello, Peter!
-/*
 
-** Loop - 'for loop' and 'While loop'
-* A 'while loop' is used to repeat a specific block of code until a condition is met.
-* a 'for loop' iterates through a block of code a number of times.
-* The 'break' statement is used to terminate the loop immediately. The 'continue' statement is used to skip the current iteration of the loop.
 
-        while loop                      for loop
+** Loop - 'for loop' and 'While loop':
+
+    * A 'while loop' is used to repeat a specific block of code until a condition is met.
+    * a 'for loop' iterates through a block of code a number of times.
+    * The 'break' statement is used to terminate the loop immediately. The 'continue' statement is used to skip the current iteration of the loop.
+
+    while loop                         for loop
+            ^                               ^
 var num = 0;                        for(var i = 0; i < 5; i++){
 while(num < 5){                        console.log('Hello'); 
     console.log('Hello');           }
-    num = num + 1;
-}
+    num = num + 1;                  // Output:
+}                                   Hello
+// Output:                          Hello
+Hello                               Hello
+Hello                               Hello
+Hello                               Hello
+Hello
+Hello
 
-* Pop and Shift
+
+** Pop and Shift:
+
 const salad = ['Tomato', 'Mushroom', 'Broccoli', 'Cucumber', 'Lettuce', 'Carrot', 'Avocado'];
-salad.pop(); // Avocado
+salad.pop(); // Removes 'Avocado' from the array
+console.log(salad); 
+// Output: ['Tomato', 'Mushroom', 'Broccoli', 'Cucumber', 'Lettuce', 'Carrot']
+
+* The 'shift()' method in JavaScript removes the first element from an array and returns that element. Here’s how it works with your example:
 
 const salad = ['Tomato', 'Mushroom', 'Broccoli', 'Cucumber', 'Lettuce', 'Carrot', 'Avocado'];
-salad.shift(); // Tomato
+salad.shift(); // Removes 'Tomato' from the array
+console.log(salad); 
+// Output: ['Mushroom', 'Broccoli', 'Cucumber', 'Lettuce', 'Carrot', 'Avocado']
+Explanation:
+    * 'shift()' removes the first element ('Tomato') from the 'salad' array.
+    * It returns the removed element, so you can capture it in a variable if needed:
 
-* Some String Operations
+const firstElement = salad.shift();
+console.log(firstElement); 
+// Output: Tomato
+
+Key Points:
+    * 'shift()' changes the original array by removing its first element.
+    * It returns the removed element, which can be stored or used elsewhere.
+    * 
+This method is useful when working with queues or other data structures where elements are processed in a first-in, first-out (FIFO) manner.
+
+** Some String Operations:
 Single string:
 var text = 'a';
 
 To write multiple strings in one line in JavaScript, you can use one of the following approaches depending on what you're trying to achieve:
-Example 1: Declaring Multiple String Variables in One Line
-let text1 = "hello", text2 = "world", text3 = "JavaScript";
+    Example 1: Declaring Multiple String Variables in One Line
+    Using the + Operator:
 
-Example 2: Concatenating Strings into a Single Variable
-let text = "hello" + " " + "world";  
-// Outputs: "hello world"
+let text1 = "hello", text2 = "world", text3 = "JavaScript";
+let result = text1 + " " + text2 + " " + text3;  // Adding spaces between words
+console.log(result);
+// Output: hello world JavaScript
+
+    Example 2: Concatenating Strings into a Single Variable
+    If you're declaring the 'text' variable twice using 'let'. This will cause a syntax error in JavaScript. You cannot declare the same variable name twice in the same scope using 'let' or 'const'. Here's how to fix it:
+
+let text1 = "hello" + " " + "world";  // Using concatenation
+let text2 = `hello world`;  // Using template literals
+console.log(text1);  // Output: hello world
+console.log(text2);  // Output: hello world
+
+    Explanation:
+    * 'text1' uses concatenation with "hello" + " " + "world".
+    * 'text2' uses a template literal, which is a simpler and more readable way to create strings.
+    * Both methods result in the same string, "hello world".
+    
+    Alternative Approach:
+    If you want to use only one variable:
+
+let text = "hello" + " " + "world";  // or let text = `hello world`;
+console.log(text);  // Output: hello world
+
+    This avoids declaring 'text' multiple times.
 
 Example 3: Using Template Literals (Modern Syntax)
 let text = `${"hello"} ${"world"}`;  
-// Outputs: "hello world"
+// Outputs: hello world
 
 Example 4: Multiple Strings in an Array (if you want to keep them separate)
 let texts = ["hello", "world", "JavaScript"];
 console.log(texts[0]); 
-// Outputs: "hello"
+// Outputs: hello
 
 ** Substring:
 In JavaScript, a substring is a portion of a string, and you can extract it using the '.substring()' method or other methods like '.slice()' and '.substr()'. Here's how to use them:
@@ -1259,5 +1335,3 @@ true
 false
 object
 */
-
-
